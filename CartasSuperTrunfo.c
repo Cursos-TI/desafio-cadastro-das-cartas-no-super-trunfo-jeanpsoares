@@ -4,9 +4,9 @@
 // Tema 1 - Cadastro das Cartas
 // Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
 // Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
 
 int main() {
+    //versao novato
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
     char estado_c01[50], cidade_c01[50], cod_cidade_c01[50], estado_c02[50], cidade_c02[50], cod_cidade_c02[50];
