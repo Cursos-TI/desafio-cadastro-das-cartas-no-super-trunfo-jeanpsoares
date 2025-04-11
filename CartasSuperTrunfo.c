@@ -4,7 +4,7 @@
 // Tema 1 - Cadastro das Cartas
 // Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
 // Siga os comentários para implementar cada parte do desafio.
-// versao aventureiro
+// versao mestre
 
 int main() {
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
@@ -36,6 +36,8 @@ int main() {
     scanf("%d", &pontos_turisticos_c01);
     float densidade01 = populacao_c01 / area_c01;
     float pib_per_capta01 = pib_c01 / populacao_c01;
+    float super_poder01 = (populacao_c01 + area_c01 + pib_c01 + pontos_turisticos_c01 + pib_per_capta01 - densidade01);
+
 
     // segunda cidade
 
@@ -56,6 +58,7 @@ int main() {
     scanf("%d", &pontos_turisticos_c02);
     float densidade02 = populacao_c02 / area_c02;
     float pib_per_capta02 = pib_c02 / populacao_c02;
+    float super_poder02 = (populacao_c02 + area_c02 + pib_c02 + pontos_turisticos_c02 + pib_per_capta02 - densidade02);
 
     
     // Exibição dos Dados das Cartas:
@@ -70,6 +73,65 @@ int main() {
     printf("Estado: %s\nCódigo: %s%s\nNome da cidade: %sPopulação: %d\n", estado_c02, estado_c02, cod_cidade_c02, cidade_c02, populacao_c02);
     printf("Área: %.2f km²\nPIB: %.2f\nNúmero de pontos turísticos: %d\n", area_c02, pib_c02, pontos_turisticos_c02);
     printf("Densidade populacional: %.2f hab/km²\nPIB per capita: %.2f reais\n", densidade02, pib_per_capta02);
+
+
+    //exibindo resultados de quais cartas vencem em cada atributo
+    printf("\n\nResultados:\n");
+    if (populacao_c01 > populacao_c02) {
+        printf("A 1ª carta vence em população.\n");
+    } else if (populacao_c01 < populacao_c02) {
+        printf("A 2ª carta vence em população.\n");
+    } else {
+        printf("As cartas empataram.\n");
+    }
+
+    if (area_c01 > area_c02) {
+        printf("A 1ª carta vence em área.\n");
+    } else if (area_c01 < area_c02) {
+        printf("A 2ª carta vence em área.\n");
+    } else {
+        printf("As cartas empataram.\n");
+    }
+
+    if (pib_c01 > pib_c02) {
+        printf("A 1ª carta vence em PIB.\n");
+    } else if (pib_c01 < pib_c02) {
+        printf("A 2ª carta vence em PIB.\n");
+    } else {
+        printf("As cartas empataram.\n");
+    }
+
+    if (pontos_turisticos_c01 > pontos_turisticos_c02) {
+        printf("A 1ª carta vence em pontos turísticos.\n");
+    } else if (pontos_turisticos_c01 < pontos_turisticos_c02) {
+        printf("A 2ª carta vence em pontos turísticos.\n");
+    } else {
+        printf("As cartas empataram.\n");
+    }
+
+    if (densidade01 < densidade02) {
+        printf("A 1ª carta vence em densidade populacional.\n");
+    } else if (densidade01 > densidade02) {
+        printf("A 2ª carta vence em densidade populacional.\n");
+    } else {
+        printf("As cartas empataram.\n");
+    }
+
+    if (pib_per_capta01 > pib_per_capta02) {
+        printf("A 1ª carta vence em PIB per capita.\n");
+    } else if (pib_per_capta01 < pib_per_capta02) {
+        printf("A 2ª carta vence em PIB per capita.\n");
+    } else {
+        printf("As cartas empataram.\n");
+    }
+
+    if (super_poder01 > super_poder02) {
+        printf("A 1ª carta vence em super poder.\n");
+    } else if (super_poder01 < super_poder02) {
+        printf("A 2ª carta vence em super poder.\n");
+    } else {
+        printf("As cartas empataram.\n");
+    }
 
     return 0;
 }
