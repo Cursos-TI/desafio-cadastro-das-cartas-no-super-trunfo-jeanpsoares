@@ -30,12 +30,12 @@ int main() {
     scanf("%d", &populacao_c01);
     printf("Digite a área da 1ª cidade (em km²):\n");
     scanf("%f", &area_c01);
-    printf("Digite o pib da 1ª cidade (em bilhões de reais):\n");
+    printf("Digite o pib da 1ª cidade:\n");
     scanf("%f", &pib_c01);
     printf("Digite o número de pontos turisticos da 1ª cidade:\n");
     scanf("%d", &pontos_turisticos_c01);
     float densidade01 = populacao_c01 / area_c01;
-    float pib_per_capta01 = (pib_c01*1000000000) / populacao_c01;
+    float pib_per_capta01 = pib_c01 / populacao_c01;
 
     // segunda cidade
 
@@ -50,12 +50,12 @@ int main() {
     scanf("%d", &populacao_c02);
     printf("Digite a área da 2ª cidade (em km²):\n");
     scanf("%f", &area_c02);
-    printf("Digite o pib da 2ª cidade (em bilhões de reais):\n");
+    printf("Digite o pib da 2ª cidade:\n");
     scanf("%f", &pib_c02);
     printf("Digite o número de pontos turisticos da 2ª cidade:\n");
     scanf("%d", &pontos_turisticos_c02);
     float densidade02 = populacao_c02 / area_c02;
-    float pib_per_capta02 = (pib_c02*1000000000) / populacao_c02;
+    float pib_per_capta02 = pib_c02 / populacao_c02;
 
     
     // Exibição dos Dados das Cartas:
